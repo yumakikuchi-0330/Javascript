@@ -20,16 +20,16 @@ nameInput.addEventListener("blur", () => {
     const nameInputValue = document.getElementById("nameInput").value;
     const errorDiv = document.getElementById("nameError");
     const zenkakuOnly = /^[^\x01-\x7E\uFF61-\uFF9F]+$/;
+    // 条件1: 未入力の場合
     if (nameInputValue === "") {
-// 条件1: 未入力の場合
         errorDiv.textContent = "正しい名前を入力してください";
         errorDiv.style.display = "block";
     } else if (!zenkakuOnly.test(nameInputValue)) {
-// 条件2: 全角文字以外（半角文字など）が含まれている場合
+    // 条件2: 全角文字以外（半角文字など）が含まれている場合
         errorDiv.textContent = "正しい名前を入力してください";
         errorDiv.style.display = "block";
     } else {
-// エラーがない場合
+    // エラーがない場合
         errorDiv.textContent = "";
         errorDiv.style.display = "none";
     }
@@ -44,15 +44,15 @@ ageInput.addEventListener("blur", () => {
     const errorAge = document.getElementById("ageError");
     const numberOnly =/^\d+$/
     if (ageInputValue === "") {
-// 条件1: 未入力の場合
+    // 条件1: 未入力の場合
         errorAge.textContent = "正しい年齢を入力してください";
         errorAge.style.display = "block";
     } else if (!numberOnly.test(ageInputValue)) {
-// 条件2: 数値以外が入力された場合
+    // 条件2: 数値以外が入力された場合
         errorAge.textContent = "正しい年齢を入力してください";
         errorAge.style.display = "block";
     } else {
-// エラーがない場合
+    // エラーがない場合
         errorAge.textContent = "";
         errorAge.style.display = "none";
     }
@@ -67,15 +67,15 @@ emailInput.addEventListener("blur", () => {
     const errorEmail = document.getElementById("emailError");
     const emailOnly = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
     if (emailInputValue === "") {
-// 条件1: 未入力の場合
+    // 条件1: 未入力の場合
         errorEmail.textContent = "正しいメールアドレスを入力してください";
         errorEmail.style.display = "block";
     } else if (!emailOnly.test(emailInputValue)) {
-// 条件2: メールアドレス以外が入力された場合
+    // 条件2: メールアドレス以外が入力された場合
         errorEmail.textContent = "正しいメールアドレスを入力してください";
         errorEmail.style.display = "block";
     } else {
-// エラーがない場合
+    // エラーがない場合
         errorEmail.textContent = "";
         errorEmail.style.display = "none";
     }
@@ -90,15 +90,15 @@ phoneInput.addEventListener("blur", () => {
     const errorphone = document.getElementById("phoneError");
     const phoneOnly = /^\d{11}$/
     if (phoneInputValue === "") {
-// 条件1: 未入力の場合
+    // 条件1: 未入力の場合
         errorphone.textContent = "正しい電話番号を入力してください";
         errorphone.style.display = "block";
     } else if (!phoneOnly.test(phoneInputValue)) {
-// 条件2: メールアドレス以外が入力された場合
+    // 条件2: メールアドレス以外が入力された場合
         errorphone.textContent = "正しい電話番号を入力してください";
         errorphone.style.display = "block";
     } else {
-// エラーがない場合
+    // エラーがない場合
         errorphone.textContent = "";
         errorphone.style.display = "none";
     }
