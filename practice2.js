@@ -125,14 +125,14 @@ const language = [];
 
 for ( let i = 0 ; i < testArray.length ; i++ ) {
     const item = testArray[i];
-    if ( typeof item === number ) {
-        numbers.push(item);
+    if ( typeof item === "number" ) {
+        number.push(item);
     } else if ( typeof item ===  "string" ) {
         language.push(item);
     }
 }
 
-console.log("数値だけの配列:", numbers);
+console.log("数値だけの配列:", number);
 console.log("文字列だけの配列:", language);
 
 //ループ処理5
