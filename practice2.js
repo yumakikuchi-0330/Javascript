@@ -26,7 +26,7 @@ num++;
 console.log(num);
 
 //算術演算子6
-let num2 = 5;
+let num2 = 0;
 num2--;
 console.log(num2);
 
@@ -34,7 +34,8 @@ console.log(num2);
 const moneyA = 8000;
 const moneyB = 12000;
 
-if ( moneyA  >  moneyB ) {
+if ( money
+    A  >  moneyB ) {
 console.log("A君の所持金が多い");
 } else {
 console.log("B君の所持金が多い");
