@@ -35,9 +35,9 @@ const moneyA = 8000;
 const moneyB = 12000;
 
 if ( moneyA  >  moneyB ) {
-console.log("A君の所持金が多い");
+    console.log("A君の所持金が多い");
 } else {
-console.log("B君の所持金が多い");
+    console.log("B君の所持金が多い");
 }
 
 //条件分岐2
