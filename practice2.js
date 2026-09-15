@@ -34,8 +34,7 @@ console.log(num2);
 const moneyA = 8000;
 const moneyB = 12000;
 
-if ( money
-    A  >  moneyB ) {
+if ( moneyA  >  moneyB ) {
 console.log("A君の所持金が多い");
 } else {
 console.log("B君の所持金が多い");
