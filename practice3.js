@@ -12,14 +12,22 @@ const constuser = {
 const json = JSON.stringify(constuser);
 console.log(json);
 
-//フォームバリデーションを実装(名前)
-const nameInput = document.getElementById("nameInput");
-console.log(nameInput)
 
-nameInput.addEventListener("blur", () => {
+//フォーム課題
+const buttonClick = document.getElementById("button")
+const nameInput = document.getElementById("nameInput");
+const zenkakuOnly = /^[^\x01-\x7E\uFF61-\uFF9F]+$/;
+const numberOnly =/^\d+$/
+const emailOnly = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
+const phoneOnly = /^\d{11}$/
+//各インプット
+const ageInput = document.getElementById("ageInput");
+const emailInput = document.getElementById("emailInput");
+const phoneInput = document.getElementById("phoneInput");
+//フォームバリデーションを実装(名前)
+buttonClick.addEventListener("click", () => {
     const nameInputValue = document.getElementById("nameInput").value;
     const errorDiv = document.getElementById("nameError");
-    const zenkakuOnly = /^[^\x01-\x7E\uFF61-\uFF9F]+$/;
     // 条件1: 未入力の場合
     if (nameInputValue === "") {
         errorDiv.textContent = "正しい名前を入力してください";
@@ -33,16 +41,9 @@ nameInput.addEventListener("blur", () => {
         errorDiv.textContent = "";
         errorDiv.style.display = "none";
     }
-});
-
 //フォームバリデーションを実装(年齢)
-const ageInput = document.getElementById("ageInput");
-console.log(ageInput)
-
-ageInput.addEventListener("blur", () => {
     const ageInputValue = document.getElementById("ageInput").value;
     const errorAge = document.getElementById("ageError");
-    const numberOnly =/^\d+$/
     if (ageInputValue === "") {
     // 条件1: 未入力の場合
         errorAge.textContent = "正しい年齢を入力してください";
@@ -56,16 +57,9 @@ ageInput.addEventListener("blur", () => {
         errorAge.textContent = "";
         errorAge.style.display = "none";
     }
-});
-
 //フォームバリデーションを実装(メールアドレス)
-const emailInput = document.getElementById("emailInput");
-console.log(emailInput)
-
-emailInput.addEventListener("blur", () => {
     const emailInputValue = document.getElementById("emailInput").value;
     const errorEmail = document.getElementById("emailError");
-    const emailOnly = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
     if (emailInputValue === "") {
     // 条件1: 未入力の場合
         errorEmail.textContent = "正しいメールアドレスを入力してください";
@@ -79,16 +73,10 @@ emailInput.addEventListener("blur", () => {
         errorEmail.textContent = "";
         errorEmail.style.display = "none";
     }
-});
-
-//フォームバリデーションを実装(電話番号)
-const phoneInput = document.getElementById("phoneInput");
-console.log(phoneInput)
-
-phoneInput.addEventListener("blur", () => {
+// //フォームバリデーションを実装(電話番号)
+    const phoneInput = document.getElementById("phoneInput");
     const phoneInputValue = document.getElementById("phoneInput").value;
     const errorphone = document.getElementById("phoneError");
-    const phoneOnly = /^\d{11}$/
     if (phoneInputValue === "") {
     // 条件1: 未入力の場合
         errorphone.textContent = "正しい電話番号を入力してください";
