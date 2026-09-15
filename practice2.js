@@ -53,35 +53,35 @@ if( moneyA  > moneyB && moneyA  > moneyC ){
 
 //条件分岐3
 const button = document.getElementById("myButton");
-button.addEventListener("click", () => {
-const score = Math.floor( Math.random() * 100 ) + 1 ;
-console.log(score)
-if ( score >=  100 ){
-    alert( "満点！！" );
-} else if ( score >= 80 ) {
-    alert( "合格です" );
-} else if ( score >= 30 )  {
-    alert( "赤点です" );
-} else {
-    alert( "不合格です" );
+button.addEventListener( "click" , () => {
+    const score = Math.floor ( Math.random() * 100 ) + 1 ;
+    console.log(score)
+    if ( score >=  100 ){
+        alert( "満点！！" );
+}   else if ( score >= 80 ) {
+        alert( "合格です" );
+}   else if ( score >= 30 )  {
+        alert( "赤点です" );
+}   else {
+        alert( "不合格です" );
 }
 })
 
 //条件分岐4
 const inputElement = document.getElementById("textbox");
 inputElement.addEventListener( "blur" , () => {
-switch ( inputElement . value ) {
-case "saitama":
-    console.log("埼玉");
-    break;
-case "tokyo":
-    console.log("東京");
-    break;
-case "kanagawa":
-    console.log("神奈川");
-    break;
-default:
-    console.log("未確認");
+    switch ( inputElement . value ) {
+        case "saitama":
+        console.log("埼玉");
+            break;
+        case "tokyo":
+        console.log("東京");
+            break;
+        case "kanagawa":
+        console.log("神奈川");
+            break;
+        default:
+        console.log("未確認");
 }
 });
 
@@ -98,14 +98,14 @@ const mindate = Math.min( 1 , 4 , 6) ;
 console.log(mindate)
 
 //ループ処理1
-for ( let i = 1 ; i <= 10; i++ ) {
-console.log("実行");
+for ( let i = 1; i <= 10; i++ ) {
+    console.log("実行");
 }
 
 //ループ処理2
 const fruits = [ "apple", "banana", "cat" ];
 for ( const fruit of fruits ) {
-console.log(fruit);
+    console.log(fruit);
 }
 
 //ループ処理3
@@ -113,7 +113,7 @@ const numbers = [ 1, 2, 3 ];
 let sum = 0;
 
 for ( let i = 0 ; i < numbers.length ; i++ ) {
-sum += numbers[i];
+    sum += numbers[i];
 }
 
 console.log(sum);
@@ -124,10 +124,10 @@ const number = [];
 const language = [];
 
 for ( let i = 0 ; i < testArray.length ; i++ ) {
-const item = testArray[i];
-if ( typeof item === number ) {
-    numbers.push(item);
-} else if ( typeof item ===  "string" ) {
+    const item = testArray[i];
+    if ( typeof item === number ) {
+        numbers.push(item);
+}   else if ( typeof item ===  "string" ) {
     language.push(item);
 }
 }
@@ -138,8 +138,8 @@ console.log("文字列だけの配列:", language);
 //ループ処理5
 let sum2 = 0;
 for ( let i = 1 ; i <= 100 ; i++ ) {
-if ( i % 2 !== 0 ){
-continue;
+    if ( i % 2 !== 0 ){
+        continue;
 }
 sum2 += i;
 }
@@ -149,50 +149,63 @@ console.log("1から100の奇数合計:", sum2);
 const items = [ 'apple', 'banana', 'cat' ];
 
 items.forEach( item => {
-console.log(item);
+    console.log(item);
 });
 
 //繰り返し２
 let i = 0
 while ( i < 10 ){
-const enter = "実行";
+    const enter = "実行";
 i += 1
 console.log(enter);
 }
 
 //繰り返し3
 for ( let i = 0 ; i < 3 ; i++ ) {
-console.log(i);
+    console.log(i);
 }
 
 const foods = ['さくらんぼ', 'レモン', 'ラフランス'];
 foods.forEach(( fruit ) => {
-console.log(fruit);
+    console.log(fruit);
 });
 
 let count = 0;
 while ( count < 3 ) {
-console.log(count);
-count++;
+    console.log(count);
+    count++;
 }
 
 //配列メソッド1(map)
 const guusuu = [ 2, 4, 6, 8 ];
-const doubled = guusuu.map( num => num * 2 );
+const doubled = guusuu.map( (num) =>{
+    return num * 2
+});
 
 console.log(doubled);
 
 //配列メソッド2(some)
 const guusuu2 = [ 2, 4, 6, 7 ];
-const doubled2 = numbers.some( num => num % 2 !== 0 );
+const doubled2 = numbers.some( (num) =>{
+    num % 2 !== 0
+});
 
 console.log(doubled2);
 
 //配列メソッド3(every)
 const bangou = [
-{ id: 2, hasSubmitted: true },
-{ id: 3, hasSubmitted: false },
-{ id: 4, hasSubmitted: true },
+{
+    id: 2,
+    hasSubmitted: true
+},
+{
+    id: 3,
+    hasSubmitted: false
+},
+{
+    id: 4,
+    hasSubmitted: true
+},
 ];
 const allSubmitted = bangou.every( item => item.hasSubmitted );
 
@@ -200,9 +213,18 @@ console.log(allSubmitted);
 
 //配列メソッド4(filter)
 const array = [
-{ id: 2, hasSubmitted: true },
-{ id: 3, hasSubmitted: false },
-{ id: 4, hasSubmitted: true },
+{
+    id: 2,
+    hasSubmitted: true
+},
+{
+    id: 3,
+    hasSubmitted: false
+},
+{
+    id: 4,
+    hasSubmitted: true
+},
 ]
 const newArray = array.filter( item => item.hasSubmitted );
 
@@ -210,9 +232,18 @@ console.log(newArray)
 
 //配列メソッド5(sort)
 const ids = [
-{ id: 323, hasSubmitted: true },
-{ id: 111, hasSubmitted: false },
-{ id: 268, hasSubmitted: true },
+{
+    id: 323,
+    hasSubmitted: true
+},
+{
+    id: 111,
+    hasSubmitted: false
+},
+{
+    id: 268,
+    hasSubmitted: true
+},
 ]
 ids.sort(( a , b ) => a.id - b.id );
 console.log(ids);
