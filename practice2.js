@@ -127,9 +127,9 @@ for ( let i = 0 ; i < testArray.length ; i++ ) {
     const item = testArray[i];
     if ( typeof item === number ) {
         numbers.push(item);
-}   else if ( typeof item ===  "string" ) {
-    language.push(item);
-}
+    } else if ( typeof item ===  "string" ) {
+        language.push(item);
+    }
 }
 
 console.log("数値だけの配列:", numbers);
@@ -140,8 +140,8 @@ let sum2 = 0;
 for ( let i = 1 ; i <= 100 ; i++ ) {
     if ( i % 2 !== 0 ){
         continue;
-}
-sum2 += i;
+    }
+    sum2 += i;
 }
 console.log("1から100の奇数合計:", sum2);
 
@@ -156,8 +156,8 @@ items.forEach( item => {
 let i = 0
 while ( i < 10 ){
     const enter = "実行";
-i += 1
-console.log(enter);
+    i += 1
+    console.log(enter);
 }
 
 //繰り返し3
