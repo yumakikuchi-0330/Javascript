@@ -26,7 +26,7 @@ const emailOnly = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a
 const phoneOnly = /^\d{11}$/
 
 const validationCheck = (inputId,errorId,regex)=>{
-    const inputValue = document.getElementById(inputId).Value.trim();
+    const inputValue = document.getElementById(inputId).value.trim();
     const errorText = document.getElementById(errorId);
     if(inputValue === ""){
         errorText.style.display = "block";
@@ -38,8 +38,8 @@ const validationCheck = (inputId,errorId,regex)=>{
 }
 
 buttonClick.addEventListener("click", () => {
-    validationcheck("nameInput","nameError", zenkakuOnly);
-    validationcheck("ageInput","ageError", numberOnly);
-    validationcheck("emailInput","emailError", emailOnly);
-    validationcheck("phoneInput","phoneError", phoneOnly);
+    validationCheck("nameInput","nameError", zenkakuOnly);
+    validationCheck("ageInput","ageError", numberOnly);
+    validationCheck("emailInput","emailError", emailOnly);
+    validationCheck("phoneInput","phoneError", phoneOnly);
 });
