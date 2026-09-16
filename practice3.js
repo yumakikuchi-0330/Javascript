@@ -25,15 +25,15 @@ const numberOnly =/^\d+$/
 const emailOnly = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/
 const phoneOnly = /^\d{11}$/
 
-const validationcheck = (inputID,errorID,regex)=>{
-    const inputvalue = document.getElementById(inputID).value.trim();
-    const errortext = document.getElementById(errorID);
-    if(inputvalue === ""){
-        errortext.style.display = "block";
-    }else if (!regex.test(inputvalue)){
-        errortext.style.display = "block";
+const validationCheck = (inputId,errorId,regex)=>{
+    const inputValue = document.getElementById(inputId).Value.trim();
+    const errorText = document.getElementById(errorId);
+    if(inputValue === ""){
+        errorText.style.display = "block";
+    }else if (!regex.test(inputValue)){
+        errorText.style.display = "block";
     }else{
-        errortext.style.display = "none";
+        errorText.style.display = "none";
     }
 }
 
